@@ -11,12 +11,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: .5s ease-in-out;
 }
+
 
 body {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 16px;
     background-color: var(--pale-blue);
+    background-size: contain;
+
 }
 
 .App-container {
@@ -35,7 +39,6 @@ body {
     background-color: #fff;
     width: 400px;
     border-radius: 12px;
-
 }
 
 .card .image-container {
@@ -103,6 +106,11 @@ body {
     margin-left: auto;
     color: var(--Bright-blue);
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.subscription-container .change:hover {
+    color: var(--Desaturated);
 }
 
 .card .btn-container {
@@ -121,18 +129,28 @@ body {
     width: inherit;
     padding: 10px;
     border: none;
-    box-shadow: 1px 5px 3px var(--Bright-blue);
+    box-shadow: 0 1.5px 2px var(--Bright-blue);
+    cursor: pointer;
 }
+
 
 .btn-container .secondary-btn {
     background-color: var(--Very-pale);
     border: none;
     font-weight: 900;
+    cursor: pointer;
 
 }
 
-@media screen and (max-width: 375px) {
+.primary-btn:hover {
+    background-color: var(--Desaturated);
+}
 
+.secondary-btn:hover {
+    color: var(--Dark-blue);
+}
+
+@media screen and (max-width: 375px) {
     .App-container {
         background: no-repeat url('./images/pattern-background-mobile.svg');
         padding: 0 24px;
